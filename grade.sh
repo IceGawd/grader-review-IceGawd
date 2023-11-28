@@ -32,10 +32,12 @@ OUTPUT=`grep "Tests run" junitOutput.txt`
 
 OUTPUT=$OUTPUT","
 
+# Phase: 1 is found colon for Tests, 3 is found colon for Failures, 2 is found comma for Tests, 4 is found comma for Failures
 PHASE=1
 FAILURES=0
 TESTS=0
 LENGTH=${#OUTPUT}
+# String accumulated since phases 1 or 3
 TEMPSTRING=""
 for (( c=0; c<LENGTH; c++ ))
 do
@@ -43,7 +45,7 @@ do
 	# echo $CHAR
 	if [[ $PHASE -eq 1 || $PHASE -eq 3 ]]
 	then
-		# Finding Semicolon for Tests Run
+		# Finding colon for Tests Run
 		if [[ $CHAR == ":" ]]
 		then
 			PHASE=$(($PHASE+1))
