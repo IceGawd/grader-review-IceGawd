@@ -49,7 +49,8 @@ do
 			PHASE=$(($PHASE+1))
 			TEMPSTRING=""
 		fi
-	elif [[ $PHASE -eq 2 || $PHASE -eq 4 ]] then
+	elif [[ $PHASE -eq 2 || $PHASE -eq 4 ]]
+	then
 		# Getting Tests Run
 		if [[ $CHAR == "," ]]
 		then
