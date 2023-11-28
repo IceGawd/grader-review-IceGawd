@@ -82,3 +82,6 @@ PERCENT=$(((100*$PASSING)/$TESTS))
 echo "GRADE: $PERCENT% ($PASSING / $TESTS)"
 
 cd ..
+
+# looks rlly good to me you have documentation so i dont rly have much to add!
+# (b~_^)b d('-'@)
